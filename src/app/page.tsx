@@ -34,7 +34,7 @@ export default function Home() {
             <p className="mb-8 max-w-3xl font-['Orpheus_Pro'] text-[28px] text-center">
               Invite you to join an <em>intimate</em>               <br className="mb-[4px]" />gathering to celebrate a <em>lot</em> of love.
               <br /> <br />
-              We can’t wait to share               <br className="mb-[4px]" />our special day with you!
+              We can&apos;t wait to share               <br className="mb-[4px]" />our special day with you!
               <br />
               <br className="mb-[4px]" />
             </p>
@@ -54,6 +54,7 @@ export default function Home() {
               <span className="mr-1 text-[16px]">♡</span>
               <span className="text-[16px]">♡</span>
             </div>
+            <p>We&apos;re just happy to have you there!</p>
          
           </div>
         </div>

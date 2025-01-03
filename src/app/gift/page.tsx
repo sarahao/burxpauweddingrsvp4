@@ -2,6 +2,7 @@
 
 import React, { useEffect, useState } from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 
 export default function Home() {
   const [showButton, setShowButton] = useState(false);
@@ -55,7 +56,7 @@ export default function Home() {
 
 
             </p>
-            <img src="/qrcodes.png" alt="QR Codes" className="mb-8" />
+            <Image src="/qrcodes.png" alt="QR Codes" className="mb-8" width={500} height={500} />
 
             </div>
             <div className="w-full h-px bg-gray-900 mb-[60px]"></div>

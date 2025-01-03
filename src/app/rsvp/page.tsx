@@ -15,7 +15,6 @@ export default function RSVPPage() {
   const handleResponse = (rsvpResponse: string) => {
     setResponse(rsvpResponse);
     console.log('RSVP Response:', { name, contact, rsvpResponse });
-    // Here you can send the data to a server or handle it as needed
   };
 
   return (
@@ -37,7 +36,6 @@ export default function RSVPPage() {
               <span className="mr-1 text-[16px]">♡</span>
               <span className="text-[16px]">♡</span>
             </div>
-           
             <h2 className="mb-4 font-['Helvetica'] font-thin text-[16px]">RSVP</h2>
             
             <div className="w-full h-px bg-gray-900 mb-[48px]"></div>

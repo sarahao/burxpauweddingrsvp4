@@ -2,6 +2,7 @@
 
 import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function ThemePage() {
   const [showButton, setShowButton] = useState(false);
@@ -53,9 +54,9 @@ export default function ThemePage() {
                 <span className="font-bold">Filipiniana</span>.
               </p>
               <h3 className="mb-4 font-['Orpheus_Pro'] text-[24px] text-center">Match the look with our color palette</h3>
-              <img src="/wedding color palette.svg" alt="Wedding Color Palette" className="mb-8" />
+              <Image src="/wedding color palette.svg" alt="Wedding Color Palette" className="mb-8" width={500} height={500} />
               <h3 className="mb-4 font-['Orpheus_Pro'] text-[24px] text-center">Outfit inspiration</h3>
-              <img src="/outfitinspo.jpeg" alt="Outfit Inspiration" className="mb-8" />
+              <Image src="/outfitinspo.jpeg" alt="Outfit Inspiration" className="mb-8" width={500} height={500} />
             </div>
             <div className="w-full h-px bg-gray-900 mb-[60px]"></div>
             
