@@ -1,6 +1,7 @@
 'use client'
 
 import React, { useEffect, useState } from 'react';
+import Link from 'next/link';
 
 export default function ThemePage() {
   const [showButton, setShowButton] = useState(false);
@@ -23,12 +24,12 @@ export default function ThemePage() {
   return (
     <div className="min-h-screen flex flex-col items-center justify-between p-4 font-['Helvetica'] font-thin text-[12px] text-gray-900">
       <header className="w-full max-w-2xl flex flex-col items-center mb-8 space-y-4">
-        <a href="/" className="text-2xl font-['Orpheus_Pro'] hover:underline">Bur & Pau</a>
+        <Link href="/" className="text-2xl font-['Orpheus_Pro'] hover:underline">Bur & Pau</Link>
         <nav className="flex space-x-4 text-[12px]">
-          <a href="/location" className="hover:underline">LOCATION</a>
-          <a href="/theme" className="hover:underline">ATTIRE</a>
-          <a href="/gift" className="hover:underline">GIFT</a>
-          <a href="/contact" className="hover:underline">CONTACT</a>
+          <Link href="/location" className="hover:underline">LOCATION</Link>
+          <Link href="/theme" className="hover:underline">ATTIRE</Link>
+          <Link href="/gift" className="hover:underline">GIFT</Link>
+          <Link href="/contact" className="hover:underline">CONTACT</Link>
         </nav>
       </header>
 

@@ -1,6 +1,7 @@
 'use client'
 
 import React, { useEffect, useState } from 'react'
+import Link from 'next/link'
 
 export default function Home() {
   const [showButton, setShowButton] = useState(false);
@@ -29,12 +30,14 @@ export default function Home() {
   return (
     <div className="min-h-screen flex flex-col items-center justify-between p-4 font-['Helvetica'] font-thin text-[12px] text-gray-900">
       <header className="w-full max-w-2xl flex flex-col items-center mb-8 space-y-4">
-        <a href="/" className="text-2xl font-['Orpheus_Pro'] hover:underline">Bur & Pau</a>
+        <Link href="/" className="text-2xl font-['Orpheus_Pro'] hover:underline">
+          Bur & Pau
+        </Link>
         <nav className="flex space-x-4 text-[12px]">
-          <a href="/location" className="hover:underline">LOCATION</a>
-          <a href="/theme" className="hover:underline">ATTIRE</a>
-          <a href="/gift" className="hover:underline">GIFT</a>
-          <a href="/contact" className="hover:underline">CONTACT</a>
+          <Link href="/location" className="hover:underline">LOCATION</Link>
+          <Link href="/theme" className="hover:underline">ATTIRE</Link>
+          <Link href="/gift" className="hover:underline">GIFT</Link>
+          <Link href="/contact" className="hover:underline">CONTACT</Link>
         </nav>
       </header>
 
@@ -74,9 +77,9 @@ Please feel free to contact us  <br className="mb-[4px]" />if you have any quest
             <div className="w-full h-px bg-gray-900 mb-[60px]"></div>
             
             <div className="mb-8">
-            <a href="/rsvp" className="text-lg font-normal no-underline border border-gray-900 py-2 px-3 hover:bg-black hover:text-white active:bg-black active:text-white">
+            <Link href="/rsvp" className="text-lg font-normal no-underline border border-gray-900 py-2 px-3 hover:bg-black hover:text-white active:bg-black active:text-white">
                 RSVP
-              </a>            </div>
+              </Link>            </div>
             <div className="flex mb-8">
               <span className="mr-1 text-[16px]">♡</span>
               <span className="text-[16px]">♡</span>

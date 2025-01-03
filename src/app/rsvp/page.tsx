@@ -1,27 +1,12 @@
 'use client'
 
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
+import Link from 'next/link';
 
 export default function RSVPPage() {
   const [name, setName] = useState('');
   const [contact, setContact] = useState('');
   const [response, setResponse] = useState('');
-  const [showButton, setShowButton] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > 0) {
-        setShowButton(true);
-      } else {
-        setShowButton(false);
-      }
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
 
   const handleInputChange = (setter: React.Dispatch<React.SetStateAction<string>>) => (event: React.ChangeEvent<HTMLInputElement>) => {
     setter(event.target.value);
@@ -36,12 +21,12 @@ export default function RSVPPage() {
   return (
     <div className="min-h-screen flex flex-col items-center justify-between p-4 font-['Helvetica'] font-thin text-[12px] text-gray-900">
       <header className="w-full max-w-2xl flex flex-col items-center mb-8 space-y-4">
-        <a href="/" className="text-2xl font-['Orpheus_Pro'] hover:underline">Bur & Pau</a>
+        <Link href="/" className="text-2xl font-['Orpheus_Pro'] hover:underline">Bur & Pau</Link>
         <nav className="flex space-x-4 text-[12px]">
-          <a href="/location" className="hover:underline">LOCATION</a>
-          <a href="/theme" className="hover:underline">ATTIRE</a>
-          <a href="/gift" className="hover:underline">GIFT</a>
-          <a href="/contact" className="hover:underline">CONTACT</a>
+          <Link href="/location" className="hover:underline">LOCATION</Link>
+          <Link href="/theme" className="hover:underline">ATTIRE</Link>
+          <Link href="/gift" className="hover:underline">GIFT</Link>
+          <Link href="/contact" className="hover:underline">CONTACT</Link>
         </nav>
       </header>
 
@@ -85,11 +70,6 @@ export default function RSVPPage() {
       <footer className="w-full text-center mb-4 mt-8">
         {/* Footer content */}
       </footer>
-      {showButton && (
-        <a href="#" className="back-to-top">
-          ↑
-        </a>
-      )}
     </div>
   );
 }
