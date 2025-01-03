@@ -26,7 +26,7 @@ export default function Home() {
         <a href="/" className="text-2xl font-['Orpheus_Pro'] hover:underline">Bur & Pau</a>
         <nav className="flex space-x-4 text-[12px]">
           <a href="/location" className="hover:underline">LOCATION</a>
-          <a href="/theme" className="hover:underline">THEME</a>
+          <a href="/theme" className="hover:underline">ATTIRE</a>
           <a href="/gift" className="hover:underline">GIFT</a>
           <a href="/contact" className="hover:underline">CONTACT</a>
         </nav>
@@ -39,38 +39,34 @@ export default function Home() {
               <span className="mr-1 text-[16px]">♡</span>
               <span className="text-[16px]">♡</span>
             </div>
-            
+           
+            <h2 className="mb-4 font-['Helvetica'] font-thin text-[16px]">GIFT INFORMATION</h2>
             <div className="w-full h-px bg-gray-900 mb-[48px]"></div>
             <div className="max-w-2xl w-full">
-              <h3 className="text-[70px] leading-[77px] font-[400] font-['Orpheus_Pro']">Bur</h3>
-              <p className="text-[24px] mb-4 italic font-['Orpheus_Pro']">- and -</p>
-              <h3 className="text-[70px] leading-[77px] font-[400] font-['Orpheus_Pro'] mb-[48px]">Pau</h3>
-            </div>
-            <div className="w-full h-px bg-gray-900 mb-[48px]"></div>
             <p className="mb-8 max-w-3xl font-['Orpheus_Pro'] text-[28px] text-center">
-              Invite you to join an <em>intimate</em>               <br className="mb-[4px]" />gathering to celebrate a <em>lot</em> of love.
-              <br /> <br />
-              We can’t wait to share               <br className="mb-[4px]" />our special day with you!
-              <br />
-              <br className="mb-[4px]" />
+              We’re just happy  <br className="mb-[4px]" />to have you there!
+      
             </p>
-            <p className="mb-[48px] font-['Helvetica'] font-thin text-[20px] text-center">
-              4PM, SATURDAY  <br />MARCH 8, 2025
-              <br />
-              Archie’s Events Place
-              <br />
-              San Pedro Laguna
-            </p> <br />
-            <div className="mb-8">
-              <a href="/rsvp" className="text-lg font-normal no-underline border border-gray-900 py-2 px-3 hover:bg-black hover:text-white active:bg-black active:text-white">
-                RSVP
-              </a>
+            <p className="mb-8 max-w-3xl font-['Orpheus_Pro'] text-[24px] text-center">
+           
+              But if you’re looking for something to give, we would be grateful <br className="mb-[4px]" /> for monetary gifts  <br className="mb-[4px]" />to help us begin our journey together. 
+              <br className="mb-[4px]" />               <span className="mr-1 text-[16px]">♡</span>
+
+
+            </p>
+            <img src="/qrcodes.png" alt="QR Codes" className="mb-8" />
+
             </div>
+            <div className="w-full h-px bg-gray-900 mb-[60px]"></div>
+            
+            <div className="mb-8">
+            <a href="/rsvp" className="text-lg font-normal no-underline border border-gray-900 py-2 px-3 hover:bg-black hover:text-white active:bg-black active:text-white">
+                RSVP
+              </a>            </div>
             <div className="flex mb-8">
               <span className="mr-1 text-[16px]">♡</span>
               <span className="text-[16px]">♡</span>
             </div>
-         
           </div>
         </div>
       </main>
@@ -86,3 +82,4 @@ export default function Home() {
     </div>
   )
 }
+

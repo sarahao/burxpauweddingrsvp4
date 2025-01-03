@@ -1,8 +1,11 @@
 'use client'
 
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react';
 
-export default function Home() {
+export default function RSVPPage() {
+  const [name, setName] = useState('');
+  const [contact, setContact] = useState('');
+  const [response, setResponse] = useState('');
   const [showButton, setShowButton] = useState(false);
 
   useEffect(() => {
@@ -20,13 +23,23 @@ export default function Home() {
     };
   }, []);
 
+  const handleInputChange = (setter: React.Dispatch<React.SetStateAction<string>>) => (event: React.ChangeEvent<HTMLInputElement>) => {
+    setter(event.target.value);
+  };
+
+  const handleResponse = (rsvpResponse: string) => {
+    setResponse(rsvpResponse);
+    console.log('RSVP Response:', { name, contact, rsvpResponse });
+    // Here you can send the data to a server or handle it as needed
+  };
+
   return (
     <div className="min-h-screen flex flex-col items-center justify-between p-4 font-['Helvetica'] font-thin text-[12px] text-gray-900">
       <header className="w-full max-w-2xl flex flex-col items-center mb-8 space-y-4">
         <a href="/" className="text-2xl font-['Orpheus_Pro'] hover:underline">Bur & Pau</a>
         <nav className="flex space-x-4 text-[12px]">
           <a href="/location" className="hover:underline">LOCATION</a>
-          <a href="/theme" className="hover:underline">THEME</a>
+          <a href="/theme" className="hover:underline">ATTIRE</a>
           <a href="/gift" className="hover:underline">GIFT</a>
           <a href="/contact" className="hover:underline">CONTACT</a>
         </nav>
@@ -39,44 +52,38 @@ export default function Home() {
               <span className="mr-1 text-[16px]">♡</span>
               <span className="text-[16px]">♡</span>
             </div>
+           
+            <h2 className="mb-4 font-['Helvetica'] font-thin text-[16px]">RSVP</h2>
             
             <div className="w-full h-px bg-gray-900 mb-[48px]"></div>
-            <div className="max-w-2xl w-full">
-              <h3 className="text-[70px] leading-[77px] font-[400] font-['Orpheus_Pro']">Bur</h3>
-              <p className="text-[24px] mb-4 italic font-['Orpheus_Pro']">- and -</p>
-              <h3 className="text-[70px] leading-[77px] font-[400] font-['Orpheus_Pro'] mb-[48px]">Pau</h3>
-            </div>
-            <div className="w-full h-px bg-gray-900 mb-[48px]"></div>
+           
             <p className="mb-8 max-w-3xl font-['Orpheus_Pro'] text-[28px] text-center">
-              Invite you to join an <em>intimate</em>               <br className="mb-[4px]" />gathering to celebrate a <em>lot</em> of love.
-              <br /> <br />
-              We can’t wait to share               <br className="mb-[4px]" />our special day with you!
-              <br />
+              We've reserved <br /> <span className="font-bold">1</span> <br /> seat  for you.
+            </p>
+            <p className="mb-8 max-w-3xl font-['Orpheus_Pro'] text-[24px] text-center">
+              <br className="mb-[4px]" />
+              Please confirm your attendance              <br className="mb-[4px]" />
+              by January 31, 2025.
               <br className="mb-[4px]" />
             </p>
-            <p className="mb-[48px] font-['Helvetica'] font-thin text-[20px] text-center">
-              4PM, SATURDAY  <br />MARCH 8, 2025
-              <br />
-              Archie’s Events Place
-              <br />
-              San Pedro Laguna
-            </p> <br />
-            <div className="mb-8">
-              <a href="/rsvp" className="text-lg font-normal no-underline border border-gray-900 py-2 px-3 hover:bg-black hover:text-white active:bg-black active:text-white">
-                RSVP
-              </a>
-            </div>
+            <p className="mt-8 max-w-3xl font-['Orpheus_Pro'] text-[14px] text-center">
+              Note:              <br className="mb-[4px]" /> We’re keeping it small and personal, so we’re only able to include those on our guest list.               <br className="mb-[4px]" />Thank you for understanding—we’re looking forward to this beautiful day together! ☺︎
+            </p>
+            <br className="mb-[4px]" />
+            <br className="mb-[4px]" />
+
+
+            <div className="w-full h-px bg-gray-900 mb-[60px]"></div>
             <div className="flex mb-8">
               <span className="mr-1 text-[16px]">♡</span>
               <span className="text-[16px]">♡</span>
             </div>
-         
           </div>
         </div>
       </main>
 
       <footer className="w-full text-center mb-4 mt-8">
-        {/* Removed Instagram icon and PAUBUR2024 */}
+        {/* Footer content */}
       </footer>
       {showButton && (
         <a href="#" className="back-to-top">
@@ -84,5 +91,5 @@ export default function Home() {
         </a>
       )}
     </div>
-  )
+  );
 }
