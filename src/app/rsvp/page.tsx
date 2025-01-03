@@ -1,22 +1,9 @@
 'use client'
 
-import React, { useState } from 'react';
+import React from 'react';
 import Link from 'next/link';
 
 export default function RSVPPage() {
-  const [name, setName] = useState('');
-  const [contact, setContact] = useState('');
-  const [response, setResponse] = useState('');
-
-  const handleInputChange = (setter: React.Dispatch<React.SetStateAction<string>>) => (event: React.ChangeEvent<HTMLInputElement>) => {
-    setter(event.target.value);
-  };
-
-  const handleResponse = (rsvpResponse: string) => {
-    setResponse(rsvpResponse);
-    console.log('RSVP Response:', { name, contact, rsvpResponse });
-  };
-
   return (
     <div className="min-h-screen flex flex-col items-center justify-between p-4 font-['Helvetica'] font-thin text-[12px] text-gray-900">
       <header className="w-full max-w-2xl flex flex-col items-center mb-8 space-y-4">
@@ -41,7 +28,7 @@ export default function RSVPPage() {
             <div className="w-full h-px bg-gray-900 mb-[48px]"></div>
            
             <p className="mb-8 max-w-3xl font-['Orpheus_Pro'] text-[28px] text-center">
-              We've reserved <br /> <span className="font-bold">1</span> <br /> seat  for you.
+              We have reserved <br /> <span className="font-bold">1</span> <br /> seat for you.
             </p>
             <p className="mb-8 max-w-3xl font-['Orpheus_Pro'] text-[24px] text-center">
               <br className="mb-[4px]" />

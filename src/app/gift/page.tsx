@@ -62,9 +62,9 @@ export default function Home() {
             <div className="w-full h-px bg-gray-900 mb-[60px]"></div>
             
             <div className="mb-8">
-            <a href="/rsvp" className="text-lg font-normal no-underline border border-gray-900 py-2 px-3 hover:bg-black hover:text-white active:bg-black active:text-white">
+            <Link href="/rsvp" className="text-lg font-normal no-underline border border-gray-900 py-2 px-3 hover:bg-black hover:text-white active:bg-black active:text-white">
                 RSVP
-              </a>            </div>
+              </Link>            </div>
             <div className="flex mb-8">
               <span className="mr-1 text-[16px]">♡</span>
               <span className="text-[16px]">♡</span>
