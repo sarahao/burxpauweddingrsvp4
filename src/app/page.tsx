@@ -32,7 +32,7 @@ export default function Home() {
             </div>
             <div className="w-full h-px bg-gray-900 mb-[48px]"></div>
             <p className="mb-8 max-w-3xl font-['Orpheus_Pro'] text-[28px] text-center">
-              Invite you to join an <em>intimate</em>               <br className="mb-[4px]" />gathering to celebrate a <em>lot</em> of love.
+              Invite you to an<br className="mb-[4px]" /><em>intimate</em> gathering<br className="mb-[4px]" />to celebrate a <em>lot</em> of love.
               <br /> <br />
               We can&apos;t wait to share               <br className="mb-[4px]" />our special day with you!
               <br />
@@ -43,7 +43,7 @@ export default function Home() {
               <br />
               Archie’s Events Place
               <br />
-              San Pedro Laguna
+              San Pedro, Laguna
             </p> <br />
             <div className="mb-8">
               <Link href="/rsvp" className="text-lg font-normal no-underline border border-gray-900 py-2 px-3 hover:bg-black hover:text-white active:bg-black active:text-white">
@@ -54,7 +54,6 @@ export default function Home() {
               <span className="mr-1 text-[16px]">♡</span>
               <span className="text-[16px]">♡</span>
             </div>
-            <p>We&apos;re just happy to have you there!</p>
          
           </div>
         </div>

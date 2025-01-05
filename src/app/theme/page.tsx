@@ -47,11 +47,11 @@ export default function ThemePage() {
             <div className="max-w-2xl w-full">
               <p className="mb-8 max-w-3xl font-['Orpheus_Pro'] text-[28px] text-center">
                 Come dressed                
-                in formal <span className="font-bold">                <br />
-                Modern Barong Tagalog</span>
+                in formal 
+                <em>Modern Barong Tagalog</em>
                 <br />
                 and                 <br />
-                <span className="font-bold">Filipiniana</span>.
+                <em>Filipiniana</em>
               </p>
               <h3 className="mb-4 font-['Orpheus_Pro'] text-[24px] text-center">Match the look with our color palette</h3>
               <Image src="/wedding color palette.svg" alt="Wedding Color Palette" className="mb-8" width={500} height={500} />
@@ -62,7 +62,7 @@ export default function ThemePage() {
             
             <div className="mb-8">
               <Link href="/" className="text-lg font-normal no-underline border border-gray-900 py-2 px-3 hover:bg-black hover:text-white active:bg-black active:text-white">
-                Home
+                Home 
               </Link>
             </div>
             <div className="flex mb-8">
