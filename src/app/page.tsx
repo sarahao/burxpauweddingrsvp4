@@ -10,7 +10,7 @@ export default function Home() {
         <Link href="/" className="text-2xl font-['Orpheus_Pro'] hover:underline">Bur &amp; Pau</Link>
         <nav className="flex space-x-4 text-[12px]">
           <Link href="/location" className="hover:underline">LOCATION</Link>
-          <Link href="/theme" className="hover:underline">THEME</Link>
+          <Link href="/theme" className="hover:underline">ATTIRE</Link>
           <Link href="/gift" className="hover:underline">GIFT</Link>
           <Link href="/contact" className="hover:underline">CONTACT</Link>
         </nav>
