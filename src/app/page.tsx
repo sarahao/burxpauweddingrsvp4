@@ -2,6 +2,7 @@
 
 import React from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 
 export default function Home() {
   return (
@@ -53,6 +54,9 @@ export default function Home() {
             <div className="flex mb-8">
               <span className="mr-1 text-[16px]">♡</span>
               <span className="text-[16px]">♡</span>
+            </div>
+            <div className="flex justify-center">
+              <Image src="/qrcode.png" alt="QR Codes" className="mb-8" />
             </div>
          
           </div>
