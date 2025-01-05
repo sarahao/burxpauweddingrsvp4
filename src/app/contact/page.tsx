@@ -49,7 +49,7 @@ export default function Home() {
               <span className="text-[16px]">♡</span>
             </div>
            
-            <h2 className="mb-4 font-[\\'Helvetica\\'] font-thin text-[16px]">CONTACT INFORMATION</h2>
+            <h2 className="mb-4 font-['Helvetica'] font-thin text-[16px]">CONTACT INFORMATION</h2>
             <div className="w-full h-px bg-gray-900 mb-[48px]"></div>
             <div className="max-w-2xl w-full">
         
