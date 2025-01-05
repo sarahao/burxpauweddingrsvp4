@@ -53,7 +53,7 @@ export default function Home() {
             <div className="w-full h-px bg-gray-900 mb-[48px]"></div>
             <div className="max-w-2xl w-full">
         
-            <p className="mb-8 max-w-3xl font-[\\'Orpheus_Pro\\'] text-[28px] text-center">
+            <p className="mb-8 max-w-3xl font-['Orpheus_Pro'] text-[28px] text-center">
            
 Please feel free to contact us  <br className="mb-[4px]" />if you have any questions :)               <br className="mb-[4px]" />
               
