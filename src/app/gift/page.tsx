@@ -56,7 +56,7 @@ export default function Home() {
 
 
             </p>
-            <Image src="/qrcodes.png" alt="QR Codes" className="mb-8" width={500} height={500} />
+            <Image src="/qrcode.png" alt="QR Codes" className="mb-8" width={500} height={500} />
 
             </div>
             <div className="w-full h-px bg-gray-900 mb-[60px]"></div>
