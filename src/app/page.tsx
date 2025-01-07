@@ -45,20 +45,22 @@ export default function Home() {
               <h3 className="text-[70px] leading-[77px] font-[400] font-['Orpheus_Pro'] mb-[48px]">Pau</h3>
             </div>
             <div className="w-full h-px bg-gray-900 mb-[48px]"></div>
-            <p className="mb-8 max-w-3xl font-['Orpheus_Pro'] text-[28px] text-center">
-              Invite you to an<br className="mb-[4px]" /><em>intimate</em> gathering<br className="mb-[4px]" />to celebrate a <em>lot</em> of love.
-              <br /> <br />
-              We can&apos;t wait to share               <br className="mb-[4px]" />our special day with you!
+            <p className="mb-8 max-w-3xl font-['Orpheus_Pro'] text-[18px] text-center">
+          
+              Dear Ninong and Ninang,
               <br />
-              <br className="mb-[4px]" />
+Thank you for graciously accepting the role of principal sponsors on our wedding day.<br />
+<br />
+Your support and guidance mean the world to us as we begin this new chapter, and your presence will make this intimate celebration even more special.
+<br /><br />
+We look forward to sharing this beautiful day with you soon!
+<br /><br />
+Love,<br />
+Bur and Pau 
             </p>
-            <p className="mb-[48px] font-['Helvetica'] font-thin text-[20px] text-center">
-              4PM, SATURDAY  <br />MARCH 8, 2025
-              <br />
-              Archie’s Events Place
-              <br />
-              San Pedro, Laguna
-            </p> <br />
+          
+
+            
             <div className="mb-8">
               <Link href="/rsvp" className="text-lg font-normal no-underline border border-gray-900 py-2 px-3 hover:bg-black hover:text-white active:bg-black active:text-white">
                 RSVP
