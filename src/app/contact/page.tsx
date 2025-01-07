@@ -96,7 +96,7 @@ Please feel free to contact us  <br className="mb-[4px]" />if you have any quest
       {showButton && (
         <button
           onClick={scrollToTop}
-          className="fixed bottom-4 right-4 bg-blue-500 text-white p-2 rounded-full shadow-lg hover:bg-blue-600 transition-all"
+          className="fixed bottom-4 right-4 bg-gray-700 text-white p-2 rounded-full shadow-lg hover:bg-gray-700 transition-all"
           aria-label="Back to top"
         >
           ↑
