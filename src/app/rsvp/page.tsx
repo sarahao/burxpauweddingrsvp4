@@ -70,6 +70,17 @@ export default function RSVPPage() {
       <footer className="w-full text-center mb-4 mt-8">
         {/* Footer content */}
       </footer>
+
+      {showButton && (
+        <div className="fixed bottom-4 right-4 z-[1000] md:bottom-8 md:right-8">
+          <button 
+            onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} 
+            className="bg-gray-900 text-white w-10 h-10 md:w-12 md:h-12 rounded-full shadow-lg hover:bg-gray-700 transition-colors flex items-center justify-center text-base md:text-lg"
+          >
+            ↑
+          </button>
+        </div>
+      )}
     </div>
   );
 }
