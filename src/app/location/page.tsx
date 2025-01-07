@@ -48,9 +48,6 @@ export default function Home() {
 Directions:                <br className="mb-[4px]" />
                
 </p>
-<div className="flex justify-center mb-4">
-              <Image src="/map.JPG" alt="map" className="mb-4" width={500} height={500} />
-            </div>
               <a href="https://ul.waze.com/ul?place=ChIJr-tREA7XlzMRNhB9DETti7w&ll=14.35150710%2C121.03020050&navigate=yes&utm_campaign=default&utm_source=waze_website&utm_medium=lm_share_location" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline text-[18px]">
                 Open in Waze
               </a>
@@ -59,6 +56,9 @@ Directions:                <br className="mb-[4px]" />
               <a href="https://maps.app.goo.gl/DABVQ2d9gaBfKU1s6" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline text-[18px]">
                 Open in Google Maps
               </a>
+            </div>
+            <div className="flex justify-center mb-4">
+              <Image src="/map.JPG" alt="map" className="mb-4" width={500} height={500} />
             </div>
             <br className="mb-[4px]" />
 
