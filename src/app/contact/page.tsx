@@ -1,9 +1,24 @@
 'use client'
 
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import Link from 'next/link'
 
 export default function Home() {
+  const [showButton, setShowButton] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 300) {
+        setShowButton(true);
+      } else {
+        setShowButton(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   const copyToClipboard = (text: string) => {
     navigator.clipboard.writeText(text).then(() => {
       alert(`Copied: ${text}`);
@@ -71,6 +86,16 @@ Please feel free to contact us  <br className="mb-[4px]" />if you have any quest
           </div>
         </main>
       </div>
+      {showButton && (
+        <div className="fixed bottom-4 right-4 z-[1000] md:bottom-8 md:right-8">
+          <button 
+            onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} 
+            className="bg-gray-900 text-white w-10 h-10 md:w-12 md:h-12 rounded-full shadow-lg hover:bg-gray-700 transition-colors flex items-center justify-center text-base md:text-lg"
+          >
+            ↑
+          </button>
+        </div>
+      )}
     </>
   )
 }
