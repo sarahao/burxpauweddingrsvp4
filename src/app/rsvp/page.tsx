@@ -8,7 +8,7 @@ export default function RSVPPage() {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 300) {
+      if (window.scrollY > 150) {
         setShowButton(true);
       } else {
         setShowButton(false);
