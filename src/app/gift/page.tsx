@@ -49,15 +49,19 @@ export default function Home() {
               <div className="flex flex-col items-center justify-center mb-8">
                 <Image src="/gcash.png" alt="gcash qr code" className="mb-8" width={500} height={500} />
                 <p className="mb-8 max-w-3xl font-['Orpheus_Pro'] text-[24px] text-center">
-                  account name: Pauline Hao
+                  Account name:                  <br className="mb-[4px]" />
+                  Pauline Hao
                   <br className="mb-[4px]" />
-                  account number: <span onClick={() => copyToClipboard('09151075544')} className="cursor-pointer text-blue-500 hover:underline">09151075544</span>
+                  Account number:                  <br className="mb-[4px]" />
+                  <span onClick={() => copyToClipboard('09151075544')} className="cursor-pointer text-blue-500 hover:underline">09151075544</span>
                 </p>
                 <Image src="/metrobank.png" alt="metrobank qr code" className="mb-8" width={500} height={500} />
                 <p className="mb-8 max-w-3xl font-['Orpheus_Pro'] text-[24px] text-center">
-                  account name: Pauline Hao
+                  Account name:                  <br className="mb-[4px]" />
+                  Pauline Hao
                   <br className="mb-[4px]" />
-                  account number: <span onClick={() => copyToClipboard('5773577109371')} className="cursor-pointer text-blue-500 hover:underline">5773577109371</span>
+                  Account number:                  <br className="mb-[4px]" />
+                  <span onClick={() => copyToClipboard('5773577109371')} className="cursor-pointer text-blue-500 hover:underline">5773577109371</span>
                 </p>
               </div>
               </div>
