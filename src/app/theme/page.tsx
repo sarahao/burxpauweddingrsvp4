@@ -65,8 +65,8 @@ export default function ThemePage() {
             <div className="w-full h-px bg-gray-900 mb-[60px]"></div>
             
             <div className="mb-8">
-              <Link href="/" className="text-lg font-normal no-underline border border-gray-900 py-2 px-3 hover:bg-black hover:text-white active:bg-black active:text-white">
-                Home 
+              <Link href="/rsvp" className="text-lg font-normal no-underline border border-gray-900 py-2 px-3 hover:bg-black hover:text-white active:bg-black active:text-white">
+                RSVP 
               </Link>
             </div>
             <div className="flex mb-8">
@@ -81,9 +81,14 @@ export default function ThemePage() {
         {/* Footer content */}
       </footer>
       {showButton && (
-        <a href="#" className="back-to-top">
-          ↑
-        </a>
+        <div className="fixed bottom-8 right-4 z-[1000] md:bottom-10 md:right-10">
+          <button 
+            onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+            className="bg-white border border-gray-900 rounded-full w-10 h-10 flex items-center justify-center hover:bg-black hover:text-white shadow-md transition-all duration-300 md:w-12 md:h-12"
+          >
+            ↑
+          </button>
+        </div>
       )}
     </div>
   );

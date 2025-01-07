@@ -21,6 +21,13 @@ export default function Home() {
     };
   }, []);
 
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  };
+
   return (
     <div className="min-h-screen flex flex-col items-center justify-between p-4 font-['Helvetica'] font-thin text-[12px] text-gray-900">
       <header className="w-full max-w-2xl flex flex-col items-center mb-8 space-y-4">
@@ -50,8 +57,9 @@ export default function Home() {
 
               <p className="mb-8 max-w-3xl font-['Orpheus_Pro'] text-[24px] text-center">
                 Address: <br className="mb-[4px]" />
-                Sapphire Street, San Pedro                <br className="mb-[4px]" />
-                4023 Laguna
+                Sapphire Street, <br className="mb-[4px]" />Crismor Subdivision<br className="mb-[4px]" />
+                San Pedro City   <br className="mb-[4px]" /> 
+                Laguna        
                 <br className="mb-[4px]" />
                 <br className="mb-[4px]" />
 
@@ -97,15 +105,17 @@ export default function Home() {
           </div>
         </div>
       </main>
-
-      <footer className="w-full text-center mb-4 mt-8">
-        {/* Removed Instagram icon and PAUBUR2024 */}
-      </footer>
       {showButton && (
-        <a href="#" className="back-to-top">
-          ↑
-        </a>
+        <div className="fixed bottom-8 right-4 z-[1000]">
+          <button 
+            onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} 
+            className="bg-gray-900 text-white w-10 h-10 rounded-full shadow-lg hover:bg-gray-700 flex items-center justify-center text-lg transition-colors duration-200"
+          >
+            ↑
+          </button>
+        </div>
       )}
+          
     </div>
   )
 }

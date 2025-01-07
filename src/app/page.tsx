@@ -5,10 +5,24 @@ import Link from 'next/link'
 import Image from 'next/image'
 
 export default function Home() {
+  const [showButton, setShowButton] = React.useState(false)
+
+  React.useEffect(() => {
+    const handleScroll = () => {
+      setShowButton(window.scrollY > 100)
+    }
+
+    window.addEventListener('scroll', handleScroll)
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll)
+    }
+  }, [])
+
   return (
     <div className="min-h-screen flex flex-col items-center justify-between p-4 font-['Helvetica'] font-thin text-[12px] text-gray-900">
       <header className="w-full max-w-2xl flex flex-col items-center mb-8 space-y-4">
-        <Link href="/" className="text-2xl font-['Orpheus_Pro'] hover:underline">Bur &amp; Pau</Link>
+        <Link href="/" className="text-2xl font-['Orpheus_Pro'] hover:underline">Bur & Pau</Link>
         <nav className="flex space-x-4 text-[12px]">
           <Link href="/location" className="hover:underline">LOCATION</Link>
           <Link href="/theme" className="hover:underline">ATTIRE</Link>
@@ -55,9 +69,7 @@ export default function Home() {
               <span className="mr-1 text-[16px]">♡</span>
               <span className="text-[16px]">♡</span>
             </div>
-            <div className="flex justify-center">
-              <Image src="/qrcode.png" alt="QR Codes" className="mb-8" />
-            </div>
+           
          
           </div>
         </div>
@@ -66,6 +78,17 @@ export default function Home() {
       <footer className="w-full text-center mb-4 mt-8">
         {/* Removed Instagram icon and PAUBUR2024 */}
       </footer>
+
+      {showButton && (
+        <div className="fixed bottom-4 right-4 z-[1000] md:bottom-8 md:right-8">
+          <button 
+            onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} 
+            className="bg-gray-900 text-white w-10 h-10 md:w-12 md:h-12 rounded-full shadow-lg hover:bg-gray-700 transition-colors flex items-center justify-center text-base md:text-lg"
+          >
+            ↑
+          </button>
+        </div>
+      )}
     </div>
   )
 }
