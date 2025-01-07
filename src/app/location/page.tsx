@@ -63,7 +63,7 @@ export default function Home() {
 Directions:                <br className="mb-[4px]" />
                
 </p>
-              <a href="https://ul.waze.com/ul?place=ChIJr-tREA7XlzMRNhB9DETti7w&ll=14.35150710%2C121.03020050&navigate=yes&utm_campaign=default&utm_source=waze_website&utm_medium=lm_share_location" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline text-[18px]">
+              <a href="https://waze.com/ul/hwdw1dheu5" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline text-[18px]">
                 Open in Waze
               </a>
               <br className="mb-[4px]" />
