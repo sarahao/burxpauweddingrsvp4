@@ -20,7 +20,7 @@ export default function Home() {
 
   return (
     <div className="min-h-screen flex flex-col items-center justify-between p-4 font-['Helvetica'] font-thin text-[12px] text-gray-900">
-      <header className="w-full max-w-2xl flex flex-col items-center mb-8 space-y-4">
+      <header className="w-full max-w-2xl flex flex-col items-center mb-4 space-y-4">
         <Link href="/" className="text-2xl font-['Orpheus_Pro'] hover:underline">Bur & Pau</Link>
         <nav className="flex space-x-4 text-[12px]">
           <Link href="/location" className="hover:underline">LOCATION</Link>
@@ -30,7 +30,7 @@ export default function Home() {
         </nav>
       </header>
 
-      <main className="flex-grow flex flex-col items-center justify-center w-full max-w-6xl mx-auto px-4">
+      <main className="flex-grow flex flex-col items-center justify-center w-full max-w-6xl mx-auto px-4 py-2">
         <div className="bg-[#f9f9f9] p-8 w-full">
           <div className="flex flex-col items-center justify-center text-center">
             <div className="flex mb-8">
