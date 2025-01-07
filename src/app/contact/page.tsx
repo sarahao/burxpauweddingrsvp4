@@ -19,6 +19,13 @@ export default function Home() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  };
+
   const copyToClipboard = (text: string) => {
     navigator.clipboard.writeText(text).then(() => {
       alert(`Copied: ${text}`);
@@ -87,14 +94,13 @@ Please feel free to contact us  <br className="mb-[4px]" />if you have any quest
         </main>
       </div>
       {showButton && (
-        <div className="fixed bottom-4 right-4 z-[1000] md:bottom-8 md:right-8">
-          <button 
-            onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} 
-            className="bg-gray-900 text-white w-10 h-10 md:w-12 md:h-12 rounded-full shadow-lg hover:bg-gray-700 transition-colors flex items-center justify-center text-base md:text-lg"
-          >
-            ↑
-          </button>
-        </div>
+        <button
+          onClick={scrollToTop}
+          className="fixed bottom-4 right-4 bg-blue-500 text-white p-2 rounded-full shadow-lg hover:bg-blue-600 transition-all"
+          aria-label="Back to top"
+        >
+          ↑
+        </button>
       )}
     </>
   )
