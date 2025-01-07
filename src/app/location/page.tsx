@@ -56,7 +56,11 @@ Directions:                <br className="mb-[4px]" />
               <a href="https://maps.app.goo.gl/DABVQ2d9gaBfKU1s6" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline text-[18px]">
                 Open in Google Maps
               </a>
+              <br className="mb-[4px]" />
+
             </div>
+                          <br className="mb-[4px]" />
+
             <div className="flex justify-center mb-4">
               <Image src="/map.JPG" alt="map" className="mb-4" width={500} height={500} />
             </div>
