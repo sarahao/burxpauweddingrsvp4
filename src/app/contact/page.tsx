@@ -19,17 +19,15 @@ export default function Home() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const scrollToTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth'
-    });
-  };
-
   const copyToClipboard = (text: string) => {
     navigator.clipboard.writeText(text).then(() => {
       alert(`Copied: ${text}`);
     });
+  };
+
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   return (
