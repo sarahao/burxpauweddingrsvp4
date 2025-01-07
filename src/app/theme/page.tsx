@@ -1,27 +1,10 @@
 'use client'
 
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 
 export default function ThemePage() {
-  const [showButton, setShowButton] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > 0) {
-        setShowButton(true);
-      } else {
-        setShowButton(false);
-      }
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
-
   return (
     <div className="min-h-screen flex flex-col items-center justify-between p-4 font-['Helvetica'] font-thin text-[12px] text-gray-900">
       <header className="w-full max-w-2xl flex flex-col items-center mb-8 space-y-4">
@@ -80,16 +63,6 @@ export default function ThemePage() {
       <footer className="w-full text-center mb-4 mt-8">
         {/* Footer content */}
       </footer>
-      {showButton && (
-        <div className="fixed bottom-8 right-4 z-[1000] md:bottom-10 md:right-10">
-          <button 
-            onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-            className="bg-white border border-gray-900 rounded-full w-10 h-10 flex items-center justify-center hover:bg-black hover:text-white shadow-md transition-all duration-300 md:w-12 md:h-12"
-          >
-            ↑
-          </button>
-        </div>
-      )}
     </div>
   );
 }

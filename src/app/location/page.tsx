@@ -1,26 +1,10 @@
 'use client'
 
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 
 export default function Home() {
-  const [showButton, setShowButton] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > 0) {
-        setShowButton(true);
-      } else {
-        setShowButton(false);
-      }
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
-
   return (
     <div className="min-h-screen flex flex-col items-center justify-between p-4 font-['Helvetica'] font-thin text-[12px] text-gray-900">
       <header className="w-full max-w-2xl flex flex-col items-center mb-8 space-y-4">
@@ -58,28 +42,21 @@ export default function Home() {
 
                 4PM, Saturday <br className="mb-[4px]" /> March 8, 2025 <br className="mb-[4px]" />
                 <br className="mb-[4px]" />
-              </p>
 
-              <div className="flex justify-center">
-                <iframe 
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7730.618477807098!2d121.0268740447302!3d14.351507119363447!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397d70e1051ebaf%3A0xbc8bed440c7d1036!2sArchie's%20Events%20Place!5e0!3m2!1sen!2sde!4v1734361615552!5m2!1sen!2sde" 
-                  width="400" 
-                  height="300" 
-                  style={{ border: 0 }} 
-                  allowFullScreen 
-                  loading="lazy" 
-                  referrerPolicy="no-referrer-when-downgrade">
-                </iframe>
-              </div>
-
-              <br className="mb-[4px]" />
-              <br className="mb-[4px]" />
-              <a href="https://ul.waze.com/ul?place=ChIJr-tREA7XlzMRNhB9DETti7w&ll=14.35150710%2C121.03020050&navigate=yes&utm_campaign=default&utm_source=waze_website&utm_medium=lm_share_location" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline">
+            </p>              
+               <p className="mb-4 max-w-3xl font-['Orpheus_Pro'] text-[24px] text-center">
+Directions:                <br className="mb-[4px]" />
+               
+</p>
+<div className="flex justify-center mb-4">
+              <Image src="/map.JPG" alt="map" className="mb-4" width={500} height={500} />
+            </div>
+              <a href="https://ul.waze.com/ul?place=ChIJr-tREA7XlzMRNhB9DETti7w&ll=14.35150710%2C121.03020050&navigate=yes&utm_campaign=default&utm_source=waze_website&utm_medium=lm_share_location" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline text-[18px]">
                 Open in Waze
               </a>
               <br className="mb-[4px]" />
 
-              <a href="https://maps.app.goo.gl/DABVQ2d9gaBfKU1s6" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline">
+              <a href="https://maps.app.goo.gl/DABVQ2d9gaBfKU1s6" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline text-[18px]">
                 Open in Google Maps
               </a>
             </div>
@@ -95,19 +72,11 @@ export default function Home() {
               <span className="mr-1 text-[16px]">♡</span>
               <span className="text-[16px]">♡</span>
             </div>
+
+            
           </div>
         </div>
       </main>
-      {showButton && (
-        <div className="fixed bottom-8 right-4 z-[1000]">
-          <button 
-            onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} 
-            className="bg-gray-900 text-white w-10 h-10 rounded-full shadow-lg hover:bg-gray-700 flex items-center justify-center text-lg transition-colors duration-200"
-          >
-            ↑
-          </button>
-        </div>
-      )}
           
     </div>
   )
