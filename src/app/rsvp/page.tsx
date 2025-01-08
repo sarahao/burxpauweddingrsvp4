@@ -43,7 +43,7 @@ export default function RSVPPage() {
             <div className="w-full h-px bg-gray-900 mb-[48px]"></div>
            
             <p className="mb-8 max-w-3xl font-['Orpheus_Pro'] text-[28px] text-center">
-              We have reserved <br /> <span className="font-bold">2</span> <br /> seat for you.
+              We have reserved <br /> <span className="font-bold">2</span> <br /> seats for you.
             </p>
             <p className="mb-8 max-w-3xl font-['Orpheus_Pro'] text-[24px] text-center">
               <br className="mb-[4px]" />
